@@ -195,7 +195,7 @@ def Base64():
 def BinarioEncode(encoding='utf-8', errors='surrogatepass'):
 	Apresentacao()
 	try:
-		mystring = input("\033[32mPLACE THE TEXT YOU WANT TO TRANSFORM IN BINÁRIO\033[1;m: ")
+		mystring = input("\033[32mPLACE THE TEXT YOU WANT TO TRANSFORM IN BINARY\033[1;m: ")
 		print("")
 		bits = bin(int(binascii.hexlify(mystring.encode(encoding, errors)), 16))[2:]
 		print(bits.zfill(8 * ((len(bits) + 7) // 8)))
@@ -204,7 +204,7 @@ def BinarioEncode(encoding='utf-8', errors='surrogatepass'):
 		print("\n[\033[1;91m!\033[1;m] VALUE ERROR")
 		sleep(3)
 		BinarioEncode()
-	Again("\n\033[1;36mWOULD YOU LIKE TO TRANSFORM ANOTHER TEXT IN BINÁRIO (y/n) ?:\033[1;m ", BinarioEncode)
+	Again("\n\033[1;36mWOULD YOU LIKE TO TRANSFORM ANOTHER TEXT IN BINARY (y/n) ?:\033[1;m ", BinarioEncode)
 
 def BinarioDecode(encoding='utf-8', errors='surrogatepass'):
 	Apresentacao()
